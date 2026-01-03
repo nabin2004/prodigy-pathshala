@@ -126,6 +126,109 @@ button.secondary {
   flex-shrink: 0;
 }
 
+
+/* Recently added */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 2rem 4rem;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.heroContent h1 span {
+  color: #2563eb;
+}
+
+.heroContent p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  background: #2563eb;
+  color: white;
+}
+
+.secondaryBtn {
+  background: transparent;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
+
+/* FEATURES */
+.features {
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 12px;
+  background: #f8fafc;
+  text-align: left;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #0f172a;
+  color: white;
+  border-radius: 16px;
+}
+
+.cta h2 {
+  font-size: 2rem;
+}
+
+.cta p {
+  margin: 1rem auto 2rem;
+  max-width: 600px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  color: #64748b;
+}
+
+
+/* Recently added finishes */
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
