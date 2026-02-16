@@ -1,12 +1,12 @@
-"use client"; // required for context/hooks
+"use client"
 
-import { AppSidebar } from "@repo/ui/components/app-sidebar";
+import { AppSidebar } from "@repo/ui/components/app-sidebar"
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@repo/ui/components/sidebar";
-import { Separator } from "@repo/ui/components/separator";
+} from "@repo/ui/components/sidebar"
+import { Separator } from "@repo/ui/components/separator"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,35 +14,38 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@repo/ui/components/breadcrumb";
+} from "@repo/ui/components/breadcrumb"
+import { ThemeToggle } from "@repo/ui/components/theme-toggle"
 
-export default function ClientDashboardLayout({ children }: { children: React.ReactNode }) {
+export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
-      <AppSidebar />
+      <AppSidebar role="admin" />
       <SidebarInset>
         <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
-          <div className="flex items-center gap-2 px-4">
+          <div className="flex flex-1 items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 data-[orientation=vertical]:h-4" />
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#">Building Your Application</BreadcrumbLink>
+                  <BreadcrumbLink href="/admin">Admin Panel</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Data Fetching</BreadcrumbPage>
+                  <BreadcrumbPage>Dashboard</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
           </div>
+          <div className="px-4">
+            <ThemeToggle />
+          </div>
         </header>
-
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           {children}
         </div>
       </SidebarInset>
     </SidebarProvider>
-  );
+  )
 }

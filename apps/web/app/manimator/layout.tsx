@@ -17,7 +17,7 @@ import {
 } from "@repo/ui/components/breadcrumb"
 import { ThemeToggle } from "@repo/ui/components/theme-toggle"
 
-export default function StudentLayout({ children }: { children: React.ReactNode }) {
+export default function ManimatorLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <AppSidebar role="student" />
@@ -29,11 +29,11 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="/student/dashboard">Student Portal</BreadcrumbLink>
+                  <BreadcrumbLink href="/student/dashboard">Home</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Dashboard</BreadcrumbPage>
+                  <BreadcrumbPage>Manimator Studio</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -42,7 +42,6 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
             <ThemeToggle />
           </div>
         </header>
-
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           {children}
         </div>
